@@ -11,13 +11,16 @@ export const HeaderContainer = styled.header`
 
 		a {
 			text-decoration: none;
-			border-radius: 6px;
 			cursor: pointer;  
+		}
+		
+		div {
+			border-radius: 6px;
 		}
 	}
 `
 
-export const LocationNavLink = styled.a`
+export const LocationContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -35,7 +38,7 @@ export const LocationNavLink = styled.a`
 	}
 `
 
-export const CartNavLink = styled.a`
+export const CartContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -41,7 +41,18 @@
 
 - [x] Install router dependencies:
   - [x] `npm i react-router-dom`
+- [x] Add `<ThemeProvider theme={defaultTheme}>` and `<GlobalStyle />` to the ./App.tsx
 - [x] Create header component structure and style
+- [x] Create DefaultLayout
+  - [x] Directory .src/layouts/DefaultLayout
+  - [x] Inside, create index.tsx and styles.ts
+  - [x] This will be the layout for the app
+  - [x] Inside, import component Header (fixed) and `<Outlet />` (the content that changes)
+- [x] Create Router.tsx file in .src/
+  - [x] Create folder ./src/pages with pages inside
+    - [x] Each page should have its won directory and the files index.tsx and styles.ts
+  - [x] Import pages to the Router file and give them paths
+  - [x] Update the App.tsx with the Router configuration
 
 ----------------------------------------------------
 
