@@ -32,8 +32,19 @@
 - [ ] Create theme and global styles
   - [x] Extract colors from Figma at theme file 
   - [x] Define style-components types at the file /styled.d.ts
-    - [x] The first theme has to be named 'defaultTheme'
+    - [x] The first theme has to be named `defaultTheme`
   - [x] Create global styles that are going to be applied to all the components
+
+----------------------------------------------------
+
+## Creating the structure in layouts, pages and main components
+
+- [x] Install router dependencies:
+  - [x] `npm i react-router-dom`
+- [x] Create header component structure and style
+
+----------------------------------------------------
+
 
 ## To Do's
 
