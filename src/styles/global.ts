@@ -25,4 +25,3 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
 `
-//  font-family: 'Baloo 2', cursive;

@@ -4,7 +4,7 @@
 
 ----------------------------------------------------
 
-## Creating the project with Vite
+## Create the project with Vite
 
 - [x] Open the terminal
 - [x] Go to the directory where you want to save the app
@@ -17,7 +17,7 @@
 - [ ] 
 ----------------------------------------------------
 
-## Defining default theme and global styles
+## Define default theme and global styles
 
 - [x] Install style dependencies: 
   - [x] `npm i styled-components`
@@ -37,7 +37,7 @@
 
 ----------------------------------------------------
 
-## Creating the structure in layouts, pages and main components
+## Organize layouts, pages and main components using Router
 
 - [x] Install router dependencies:
   - [x] `npm i react-router-dom`
@@ -56,13 +56,21 @@
 
 ----------------------------------------------------
 
+## Create structure and style of pages and main components
+
+- [x] Create home page
+  - [ ] Create structure of the page divided into components
+  - [ ] Style the home page
+  - [ ] Each component should have its own directory with index.tsx and styles.ts
+  - [ ] Style each component
+
+
+----------------------------------------------------
 
 ## To Do's
 
-- [ ] Open Figma -> create structure and style first 
-  - [ ] Routing
-  - [ ] Theme
-  - [ ] Default layout
+- [ ] Nav bar should be fixed according to Figma
+
 
 ----------------------------------------------------
 
