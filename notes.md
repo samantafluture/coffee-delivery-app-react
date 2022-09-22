@@ -12,13 +12,31 @@
 - [x] Give the project a name
 - [x] Then go to the directory of the app and `code .`
 - [x] Install the dependencies with the command `npm install` and run the project with `npm run dev` 
-
+- [x] Clean the files and directories
+- [x] Create repository and push to github
+- [ ] 
 ----------------------------------------------------
+
+## Defining default theme and global styles
+
+- [x] Install style dependencies: 
+  - [x] `npm i styled-components`
+  - [x] `npm i @types/styled-components`
+  - [x] `npm i phosphor-react`
+- [x] Create following directories and files:
+  - [x] .src/styles/themes/default.ts 
+  - [x] .src/styles/global.ts
+  - [x] .src/@types/styled.d.ts
+- [x] Export logo from Figma as SVG and save it in ./src/assets
+- [x] Get the fonts from Google Fonts
+- [ ] Create theme and global styles
+  - [x] Extract colors from Figma at theme file 
+  - [x] Define style-components types at the file /styled.d.ts
+    - [x] The first theme has to be named 'defaultTheme'
+  - [x] Create global styles that are going to be applied to all the components
 
 ## To Do's
 
-- [x] Clean the files and directories
-- [ ] Create repository and push to github
 - [ ] Open Figma -> create structure and style first 
   - [ ] Routing
   - [ ] Theme
