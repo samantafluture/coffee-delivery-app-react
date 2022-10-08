@@ -59,18 +59,19 @@
 ## Create structure and style of pages and main components
 
 - [x] Create home page
-  - [] Create structure of the page divided into components
-  - [ ] Style the home page
-  - [ ] Each component should have its own directory with index.tsx and styles.ts
-  - [ ] Style each component
+  - [x] Create structure of the page divided into components
+  - [x] Style the home page
+  - [x] Each component should have its own directory with index.tsx and styles.ts
+  - [x] Style each component
+  - [x] Use mock data to create components
 
+- [] Create checkout page
+  - [] Create structure 
+  - [] Style the page
 
-----------------------------------------------------
+### TODO
 
-## To Do's
- 
 - [ ] Nav bar should be fixed according to Figma
-
 
 ----------------------------------------------------
 
