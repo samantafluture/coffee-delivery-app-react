@@ -101,20 +101,21 @@ export const ButtonWithIcon = styled.button`
 	align-items: center;
 	gap: 0.75rem;
 	padding: 1rem;
-	border: 0;
+  border: 1px solid ${(props) => props.theme['base-button']};
 	border-radius: 6px;
 	background-color: ${(props) => props.theme['base-button']};
 	cursor: pointer;
 
 	&:hover {
-		background-color: ${(props) => props.theme['base-hover']};
+		border: 1px solid ${(props) => props.theme['brand-purple']};
+		background-color: ${(props) => props.theme['brand-purple-light']};
 	}
 
 	&:selected {
 		background-color: ${(props) => props.theme['brand-purple-light']};
 		border: 1px solid ${(props) => props.theme['brand-purple']};
 	}
-  
+
 	svg {
 		color: ${(props) => props.theme['brand-purple']};
 	}
@@ -182,6 +183,7 @@ export const CartItem = styled.div`
 		padding: 0.5rem;
 		gap: 0.5rem;
 		font-size: 0.75rem;
+    border: 1px solid ${(props) => props.theme['base-button']};
 
 		svg {
 			color: ${(props) => props.theme['brand-purple']};
@@ -193,7 +195,8 @@ export const CartItem = styled.div`
 		}
 
 		&:hover {
-			background-color: ${(props) => props.theme['base-hover']};
+			border: 1px solid ${(props) => props.theme['brand-purple']};
+			background-color: ${(props) => props.theme['brand-purple-light']};
 		}
 	}
 
