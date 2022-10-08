@@ -7,8 +7,13 @@ import {
 	FormHeaderAlternate,
 	ButtonsContainer,
 	ButtonWithIcon,
+	CartList,
+	CartItem,
+	AddressContainer,
 	CartContainer,
-  CartItem
+	Divider,
+	PriceBreakdown,
+  ButtonCheckout
 } from './styles'
 
 import {
@@ -21,12 +26,12 @@ import {
 	Trash,
 } from 'phosphor-react'
 import expresso from '../../assets/coffees/expresso.png'
-import late from '../../assets/coffees/late.png'
+import latte from '../../assets/coffees/latte.png'
 
 export function Checkout() {
 	return (
 		<CheckoutContainer>
-			<div>
+			<AddressContainer>
 				<h2>Complete your order</h2>
 				<FormContainer>
 					<FormHeader>
@@ -83,11 +88,11 @@ export function Checkout() {
 						</ButtonWithIcon>
 					</ButtonsContainer>
 				</FormContainer>
-			</div>
+			</AddressContainer>
 
-			<div>
+			<CartContainer>
 				<h2>Selected coffees</h2>
-				<CartContainer>
+				<CartList>
 					<CartItem>
 						<img src={expresso} />
 						<div>
@@ -100,14 +105,51 @@ export function Checkout() {
 								</div>
 								<div className='cart_btnRemove'>
 									<Trash size={18} />
-                  <span>Remove</span>
+									<span>Remove</span>
 								</div>
 							</div>
 						</div>
 						<span className='cart_price'>$ 9.99</span>
 					</CartItem>
-				</CartContainer>
-			</div>
+					<Divider />
+					<CartItem>
+						<img src={latte} />
+						<div>
+							<p>Latte</p>
+							<div className='cart_btns'>
+								<div className='cart_btnQuantity'>
+									<Minus size={18} />
+									<span>2</span>
+									<Plus size={18} />
+								</div>
+								<div className='cart_btnRemove'>
+									<Trash size={18} />
+									<span>Remove</span>
+								</div>
+							</div>
+						</div>
+						<span className='cart_price'>$ 19.98</span>
+					</CartItem>
+					<Divider />
+					<PriceBreakdown>
+						<div>
+							<span>Total items</span>
+							<span>$ 29.97</span>
+						</div>
+						<div>
+							<span>Shipping</span>
+							<span>$ 3.00</span>
+						</div>
+						<div>
+							<span>Total</span>
+							<span>$ 32.97</span>
+						</div>
+					</PriceBreakdown>
+          <ButtonCheckout>
+            Checkout
+          </ButtonCheckout>
+				</CartList>
+			</CartContainer>
 		</CheckoutContainer>
 	)
 }

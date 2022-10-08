@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const CheckoutContainer = styled.main`
 	margin-top: 4.5rem;
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -18,12 +17,21 @@ export const CheckoutContainer = styled.main`
 	}
 `
 
+export const AddressContainer = styled.div`
+	width: 60%;
+`
+
+export const CartContainer = styled.div`
+	width: 40%;
+`
+
 export const FormContainer = styled.div`
 	width: 100%;
 	background-color: ${(props) => props.theme['base-card']};
 	padding: 2.5rem;
 	border-radius: 6px;
 	margin-bottom: 0.75rem;
+	flex: 2;
 `
 
 export const FormHeader = styled.div`
@@ -83,7 +91,7 @@ export const FormHeaderAlternate = styled(FormHeader)`
 export const ButtonsContainer = styled.div`
 	display: flex;
 	gap: 0.75rem;
-	justify-content: space-between;
+	justify-content: stretch;
 	align-items: center;
 `
 
@@ -98,6 +106,15 @@ export const ButtonWithIcon = styled.button`
 	background-color: ${(props) => props.theme['base-button']};
 	cursor: pointer;
 
+	&:hover {
+		background-color: ${(props) => props.theme['base-hover']};
+	}
+
+	&:selected {
+		background-color: ${(props) => props.theme['brand-purple-light']};
+		border: 1px solid ${(props) => props.theme['brand-purple']};
+	}
+  
 	svg {
 		color: ${(props) => props.theme['brand-purple']};
 	}
@@ -109,7 +126,7 @@ export const ButtonWithIcon = styled.button`
 	}
 `
 
-export const CartContainer = styled(FormContainer)`
+export const CartList = styled(FormContainer)`
 	border-radius: 6px 44px;
 `
 
@@ -123,20 +140,20 @@ export const CartItem = styled.div`
 		width: 4rem;
 		height: 4rem;
 	}
-  
-  p {
-    font-size: 1rem;
-    color: ${(props) => props.theme['base-subtitle']};
-    padding-bottom: 0.15rem;
-  }
+
+	p {
+		font-size: 1rem;
+		color: ${(props) => props.theme['base-subtitle']};
+		padding-bottom: 0.15rem;
+	}
 
 	.cart_btns {
 		display: flex;
 		justify-content: left;
 		align-items: flex-start;
 		margin-top: 0.5rem;
-    gap: 0.5rem;
-    margin-right: 1.875rem;
+		gap: 0.5rem;
+		margin-right: 1.875rem;
 	}
 
 	.cart_btnQuantity {
@@ -156,29 +173,70 @@ export const CartItem = styled.div`
 	}
 
 	.cart_btnRemove {
-    display: flex;
+		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		cursor: pointer;
-    background-color: ${(props) => props.theme['base-button']};
+		background-color: ${(props) => props.theme['base-button']};
 		border-radius: 6px;
 		padding: 0.5rem;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    
-    svg {
-      color: ${(props) => props.theme['brand-purple']};
-    }
-    
-    span {
+		gap: 0.5rem;
+		font-size: 0.75rem;
+
+		svg {
+			color: ${(props) => props.theme['brand-purple']};
+		}
+
+		span {
 			color: ${(props) => props.theme['base-subtitle']};
 			text-transform: uppercase;
-
 		}
-    
+
+		&:hover {
+			background-color: ${(props) => props.theme['base-hover']};
+		}
 	}
 
 	.cart_price {
 		font-weight: 700;
+	}
+`
+export const Divider = styled.div`
+	border-top: 1px solid ${(props) => props.theme['base-button']};
+	margin: 2rem 0;
+`
+
+export const PriceBreakdown = styled.div`
+	margin-top: -0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	div {
+		display: flex;
+		justify-content: space-between;
+		margin: 0.75rem 0;
+		font-size: 1rem;
+
+		&:last-of-type {
+			font-size: 1.25rem;
+			font-weight: 700;
+		}
+	}
+`
+export const ButtonCheckout = styled.button`
+	border: 0;
+	background-color: ${(props) => props.theme['brand-yellow']};
+	color: ${(props) => props.theme['base-white']};
+	text-transform: uppercase;
+	font-weight: 700;
+	width: 100%;
+	padding: 0.75rem 0.5rem;
+	border-radius: 6px;
+	margin-top: 1.5rem;
+	cursor: pointer;
+
+	&:hover {
+		background-color: ${(props) => props.theme['brand-yellow-dark']};
 	}
 `
