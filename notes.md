@@ -65,9 +65,13 @@
   - [x] Style each component
   - [x] Use mock data to create components
 
-- [] Create checkout page
-  - [] Create structure 
-  - [] Style the page
+- [x] Create checkout page
+  - [x] Create structure 
+  - [x] Style the page
+
+- [ ] Create success page
+  - [ ] Create structure 
+  - [ ] Style the page
 
 ### TODO
 

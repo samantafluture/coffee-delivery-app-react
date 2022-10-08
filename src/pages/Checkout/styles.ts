@@ -19,10 +19,13 @@ export const CheckoutContainer = styled.main`
 
 export const AddressContainer = styled.div`
 	width: 60%;
+	margin-bottom: 4rem;
+
 `
 
 export const CartContainer = styled.div`
 	width: 40%;
+	
 `
 
 export const FormContainer = styled.div`
