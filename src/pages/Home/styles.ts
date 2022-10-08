@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import imageBackground from '../../assets/banner-background.png'
 
-export const HomeContainer = styled.main``
+export const HomeContainer = styled.main`
+`
 
 export const InfoContainerBackground = styled.div`
 	background-image: url(${imageBackground});
@@ -102,6 +103,7 @@ export const InfoItems = styled.div`
 `
 
 export const CoffeeListContainer = styled.div`
+	
 	h2 {
 		font-family: 'Baloo 2', cursive;
 		color: ${(props) => props.theme['base-subtitle']};
@@ -110,15 +112,16 @@ export const CoffeeListContainer = styled.div`
 		line-height: 2.6rem;
 		margin-bottom: 0.875rem;
 	}
+	
+	padding-bottom: 4rem;
 `
 
 export const CoffeeListGrid = styled.div`
 	display: grid;
-	gap: 2rem;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	max-width: 80rem;
+	gap: 2rem;
 	
-		@media (min-width: 481px) and (max-width: 768px) {
+	@media (min-width: 481px) and (max-width: 768px) {
 		grid-template-columns: 1fr 1fr;
 	}
 	@media (max-width: 480px) {

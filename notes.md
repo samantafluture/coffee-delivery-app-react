@@ -69,7 +69,6 @@
 
 ## To Do's
  
-- [ ] Insert mock coffee cards into Home page
 - [ ] Nav bar should be fixed according to Figma
 
 

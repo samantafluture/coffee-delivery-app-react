@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const CoffeeCardContainer = styled.div`
-	width: 16rem;
+	/* width: 16rem; */
 	background-color: ${(props) => props.theme['base-card']};
 	border-radius: 6px 36px;
 	text-align: center;
 	padding: 1.25rem;
 	margin-top: 1.375rem;
+	cursor: pointer;
 	
 	img {
 		margin-top: -2.5rem;
