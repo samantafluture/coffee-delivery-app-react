@@ -59,7 +59,7 @@
 ## Create structure and style of pages and main components
 
 - [x] Create home page
-  - [ ] Create structure of the page divided into components
+  - [] Create structure of the page divided into components
   - [ ] Style the home page
   - [ ] Each component should have its own directory with index.tsx and styles.ts
   - [ ] Style each component
@@ -68,7 +68,8 @@
 ----------------------------------------------------
 
 ## To Do's
-
+ 
+- [ ] Insert mock coffee cards into Home page
 - [ ] Nav bar should be fixed according to Figma
 
 
