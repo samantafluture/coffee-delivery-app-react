@@ -1,4 +1,4 @@
-import { Coffee } from '../contexts/CartContext'
+import { Coffee } from '../contexts/ShoppingCartContext'
 
 class CartStorage {
 	private key = 'persist:cart'

@@ -1,4 +1,4 @@
-import { Coffee } from './../../contexts/CartContext';
+import { Coffee } from '../../contexts/ShoppingCartContext';
 import { Types } from './types';
 import { clear, remove, add } from './actions';
 

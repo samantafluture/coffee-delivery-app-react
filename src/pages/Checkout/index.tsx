@@ -8,12 +8,11 @@ import {
 	ButtonsContainer,
 	ButtonWithIcon,
 	CartList,
-	CartItem,
 	AddressContainer,
 	CartContainer,
 	Divider,
 	PriceBreakdown,
-  ButtonCheckout
+	ButtonCheckout,
 } from './styles'
 
 import {
@@ -21,12 +20,8 @@ import {
 	CreditCard,
 	Bank,
 	Money,
-	Minus,
-	Plus,
-	Trash,
 } from 'phosphor-react'
-import expresso from '../../assets/coffees/expresso.png'
-import latte from '../../assets/coffees/latte.png'
+import { CartItem } from './CartItem'
 
 export function Checkout() {
 	return (
@@ -93,43 +88,9 @@ export function Checkout() {
 			<CartContainer>
 				<h2>Selected coffees</h2>
 				<CartList>
-					<CartItem>
-						<img src={expresso} />
-						<div>
-							<p>Traditional Express</p>
-							<div className='cart_btns'>
-								<div className='cart_btnQuantity'>
-									<Minus size={18} />
-									<span>1</span>
-									<Plus size={18} />
-								</div>
-								<div className='cart_btnRemove'>
-									<Trash size={18} />
-									<span>Remove</span>
-								</div>
-							</div>
-						</div>
-						<span className='cart_price'>$ 9.99</span>
-					</CartItem>
+					<CartItem />
 					<Divider />
-					<CartItem>
-						<img src={latte} />
-						<div>
-							<p>Latte</p>
-							<div className='cart_btns'>
-								<div className='cart_btnQuantity'>
-									<Minus size={18} />
-									<span>2</span>
-									<Plus size={18} />
-								</div>
-								<div className='cart_btnRemove'>
-									<Trash size={18} />
-									<span>Remove</span>
-								</div>
-							</div>
-						</div>
-						<span className='cart_price'>$ 19.98</span>
-					</CartItem>
+					<CartItem />
 					<Divider />
 					<PriceBreakdown>
 						<div>
@@ -145,9 +106,7 @@ export function Checkout() {
 							<span>$ 32.97</span>
 						</div>
 					</PriceBreakdown>
-          <ButtonCheckout href='/success'>
-            Checkout
-          </ButtonCheckout>
+					<ButtonCheckout href='/success'>Checkout</ButtonCheckout>
 				</CartList>
 			</CartContainer>
 		</CheckoutContainer>

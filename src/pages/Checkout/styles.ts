@@ -134,79 +134,7 @@ export const CartList = styled(FormContainer)`
 	border-radius: 6px 44px;
 `
 
-export const CartItem = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	gap: 1.25rem;
 
-	img {
-		width: 4rem;
-		height: 4rem;
-	}
-
-	p {
-		font-size: 1rem;
-		color: ${(props) => props.theme['base-subtitle']};
-		padding-bottom: 0.15rem;
-	}
-
-	.cart_btns {
-		display: flex;
-		justify-content: left;
-		align-items: flex-start;
-		margin-top: 0.5rem;
-		gap: 0.5rem;
-		margin-right: 1.875rem;
-	}
-
-	.cart_btnQuantity {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: ${(props) => props.theme['base-button']};
-		border-radius: 6px;
-		padding: 0 0.5rem;
-		color: ${(props) => props.theme['brand-purple']};
-		font-size: 1rem;
-
-		span {
-			color: ${(props) => props.theme['base-subtitle']};
-			padding: 0.5rem;
-		}
-	}
-
-	.cart_btnRemove {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		cursor: pointer;
-		background-color: ${(props) => props.theme['base-button']};
-		border-radius: 6px;
-		padding: 0.5rem;
-		gap: 0.5rem;
-		font-size: 0.75rem;
-    border: 1px solid ${(props) => props.theme['base-button']};
-
-		svg {
-			color: ${(props) => props.theme['brand-purple']};
-		}
-
-		span {
-			color: ${(props) => props.theme['base-subtitle']};
-			text-transform: uppercase;
-		}
-
-		&:hover {
-			border: 1px solid ${(props) => props.theme['brand-purple']};
-			background-color: ${(props) => props.theme['brand-purple-light']};
-		}
-	}
-
-	.cart_price {
-		font-weight: 700;
-	}
-`
 export const Divider = styled.div`
 	border-top: 1px solid ${(props) => props.theme['base-button']};
 	margin: 2rem 0;

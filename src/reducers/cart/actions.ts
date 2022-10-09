@@ -1,4 +1,4 @@
-import { Coffee } from '../../contexts/CartContext'
+import { Coffee } from '../../contexts/ShoppingCartContext'
 import CartStorage from '../../service/CartStorage'
 
 export function clear(): Coffee[] {

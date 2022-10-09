@@ -1,6 +1,7 @@
 import { CoffeeCardContainer, CoffeeTag } from './styles'
 
 import { ShoppingCart, Minus, Plus } from 'phosphor-react'
+import { useShoppingCart } from '../../../../contexts/ShoppingCartContext'
 
 export enum CoffeeTags {
 	TRADITIONAL = 'Traditional',
@@ -11,23 +12,30 @@ export enum CoffeeTags {
 }
 
 export interface CoffeeProps {
-	id?: string
+	id: string
 	imgUrl: string
 	tag: CoffeeTags
 	title: string
 	description: string
 	price: number
-	quantity: number
 }
 
 export function CoffeeCard({
+	id,
 	imgUrl,
 	tag,
 	title,
 	description,
 	price,
-	quantity,
 }: CoffeeProps) {
+	const {
+		getItemQuantity,
+		increaseCartQuantity,
+		decreaseCartQuantity,
+	} = useShoppingCart()
+	
+	const quantity = getItemQuantity(id)
+	
 	return (
 		<CoffeeCardContainer>
 			<img src={imgUrl} />
@@ -40,11 +48,11 @@ export function CoffeeCard({
 				</p>
 				<div className='footer_addToCart'>
 					<div className='addToCart_quantity'>
-						<Minus size={18} />
+						<Minus size={18} onClick={() => decreaseCartQuantity(id)} />
 						<span>{quantity}</span>
-						<Plus size={18} />
+						<Plus size={18} onClick={() => increaseCartQuantity(id)} />
 					</div>
-					<div className='addToCart_cart'>
+					<div className='addToCart_cart' onClick={() => increaseCartQuantity(id)}>
 						<ShoppingCart size={18} weight='fill' />
 					</div>
 				</div>

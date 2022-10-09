@@ -12,7 +12,7 @@ export const InfoContainerBackground = styled.div`
 		inset;
 
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 `
 
 export const InfoContainer = styled.div`

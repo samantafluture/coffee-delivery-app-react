@@ -15,13 +15,12 @@ export function Home() {
 					{coffeeData.map((coffee) => {
 						return (
 							<CoffeeCard
+								id={coffee.id}
 								imgUrl={coffee.imgUrl}
 								tag={coffee.tag}
 								title={coffee.title}
 								description={coffee.description}
-								price={coffee.price}
-								quantity={coffee.quantity}
-							/>
+								price={coffee.price} 							/>
 						)
 					})}
 				</CoffeeListGrid>
