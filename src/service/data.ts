@@ -1,21 +1,24 @@
-import { CoffeeProps, CoffeeTags } from "./pages/Home/components/CoffeeCard";
+import {
+	CoffeeProps,
+	CoffeeTags,
+} from '../pages/Home/components/CoffeeCard'
 
-import expresso from './assets/coffees/expresso.png'
-import americano from './assets/coffees/americano.png'
-import creamy from './assets/coffees/creamy.png'
-import iced from './assets/coffees/iced.png'
-import withMilk from './assets/coffees/with-milk.png'
-import latte from './assets/coffees/latte.png'
-import capuccino from './assets/coffees/capuccino.png'
-import mocaccino from './assets/coffees/mocaccino.png'
-import hotChocolate from './assets/coffees/hot-chocolate.png'
-import cuban from './assets/coffees/cuban.png'
-import hawaiian from './assets/coffees/hawaiian.png'
-import arabic from './assets/coffees/arabic.png'
-import irish from './assets/coffees/irish.png'
-import macchiato from './assets/coffees/macchiato.png'
+import expresso from '../assets/coffees/expresso.png'
+import americano from '../assets/coffees/americano.png'
+import creamy from '../assets/coffees/creamy.png'
+import iced from '../assets/coffees/iced.png'
+import withMilk from '../assets/coffees/with-milk.png'
+import latte from '../assets/coffees/latte.png'
+import capuccino from '../assets/coffees/capuccino.png'
+import mocaccino from '../assets/coffees/mocaccino.png'
+import hotChocolate from '../assets/coffees/hot-chocolate.png'
+import cuban from '../assets/coffees/cuban.png'
+import hawaiian from '../assets/coffees/hawaiian.png'
+import arabic from '../assets/coffees/arabic.png'
+import irish from '../assets/coffees/irish.png'
+import macchiato from '../assets/coffees/macchiato.png'
 
-export const coffees: CoffeeProps[] = [                    
+export const coffeeData: CoffeeProps[] = [
 	{
 		id: '1',
 		imgUrl: expresso,
@@ -72,34 +75,37 @@ export const coffees: CoffeeProps[] = [
 	},
 	{
 		id: '7',
-		imgUrl: capuccino,                   
+		imgUrl: capuccino,
 		tag: CoffeeTags.TRADITIONAL,
 		title: 'Capuccino',
-		description: 'Cinnamon drink made from equal doses of coffee, milk and foam',
+		description:
+			'Cinnamon drink made from equal doses of coffee, milk and foam',
 		price: 9.99,
-		quantity: 1,        
+		quantity: 1,
 	},
 	{
 		id: '8',
-		imgUrl: mocaccino,                   
+		imgUrl: mocaccino,
 		tag: CoffeeTags.TRADITIONAL,
 		title: 'Mocaccino',
-		description: 'Espresso coffee with chocolate syrup, little milk and foam',
+		description:
+			'Espresso coffee with chocolate syrup, little milk and foam',
 		price: 9.99,
 		quantity: 1,
 	},
 	{
 		id: '9',
-		imgUrl: hotChocolate,                   
+		imgUrl: hotChocolate,
 		tag: CoffeeTags.TRADITIONAL,
 		title: 'Hot Chocolate',
-		description: 'Drink made with chocolate dissolved in hot milk and coffee',
+		description:
+			'Drink made with chocolate dissolved in hot milk and coffee',
 		price: 9.99,
 		quantity: 1,
 	},
 	{
 		id: '10',
-		imgUrl: cuban,                   
+		imgUrl: cuban,
 		tag: CoffeeTags.ALCOHOLIC,
 		title: 'Cuban',
 		description: 'Iced espresso drink with rum, cream and mint',
@@ -108,7 +114,7 @@ export const coffees: CoffeeProps[] = [
 	},
 	{
 		id: '11',
-		imgUrl: hawaiian,                   
+		imgUrl: hawaiian,
 		tag: CoffeeTags.SPECIAL,
 		title: 'Hawaiian',
 		description: 'Sweet drink prepared with coffee and coconut milk',
@@ -117,7 +123,7 @@ export const coffees: CoffeeProps[] = [
 	},
 	{
 		id: '12',
-		imgUrl: arabic,                   
+		imgUrl: arabic,
 		tag: CoffeeTags.SPECIAL,
 		title: 'Arabic',
 		description: 'Drink prepared with Arabic coffee beans and spices',
@@ -126,16 +132,17 @@ export const coffees: CoffeeProps[] = [
 	},
 	{
 		id: '13',
-		imgUrl: irish,                   
+		imgUrl: irish,
 		tag: CoffeeTags.ALCOHOLIC,
 		title: 'Irish',
-		description: 'Drink made from coffee, Irish whiskey, sugar and whipped cream',
+		description:
+			'Drink made from coffee, Irish whiskey, sugar and whipped cream',
 		price: 9.99,
 		quantity: 1,
 	},
 	{
 		id: '14',
-		imgUrl: macchiato,                   
+		imgUrl: macchiato,
 		tag: CoffeeTags.WITH_MILK,
 		title: 'Macchiato',
 		description: 'Espresso coffee mixed with some hot milk and foam',

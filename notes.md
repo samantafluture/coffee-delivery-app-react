@@ -69,13 +69,29 @@
   - [x] Create structure 
   - [x] Style the page
 
-- [ ] Create success page
-  - [ ] Create structure 
-  - [ ] Style the page
+- [x] Create success page
+  - [x] Create structure 
+  - [x] Style the page
+
+- [x] Extract components in different folders
+
+----------------------------------------------------
+## List all items using mock data
+
+- [x] Create data.ts file with mock data
+- [x] Import this data to the component and map it to list all
+- [x] Use interface props and enums for info that don't change 
+
+## Use useContext() and useReducer()
+
+- [x] Create folder /context with the specific context (name-of-the-context.ts) inside
+- [x] Using `createContext` create your own context with a new type
+- [x] Create the interface needed for this type 
 
 ### TODO
 
 - [ ] Nav bar should be fixed according to Figma
+https://medium.com/@edefne878/sticky-header-on-scroll-up-with-custom-react-hook-b4739f76a40e
 
 ----------------------------------------------------
 

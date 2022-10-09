@@ -230,8 +230,9 @@ export const PriceBreakdown = styled.div`
 		}
 	}
 `
-export const ButtonCheckout = styled.button`
+export const ButtonCheckout = styled.a`
 	border: 0;
+	text-decoration: none;
 	background-color: ${(props) => props.theme['brand-yellow']};
 	color: ${(props) => props.theme['base-white']};
 	text-transform: uppercase;
@@ -241,6 +242,8 @@ export const ButtonCheckout = styled.button`
 	border-radius: 6px;
 	margin-top: 1.5rem;
 	cursor: pointer;
+	display: block;
+	text-align: center;
 
 	&:hover {
 		background-color: ${(props) => props.theme['brand-yellow-dark']};

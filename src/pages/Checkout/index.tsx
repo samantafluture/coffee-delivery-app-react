@@ -145,7 +145,7 @@ export function Checkout() {
 							<span>$ 32.97</span>
 						</div>
 					</PriceBreakdown>
-          <ButtonCheckout>
+          <ButtonCheckout href='/success'>
             Checkout
           </ButtonCheckout>
 				</CartList>
