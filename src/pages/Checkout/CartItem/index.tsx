@@ -10,6 +10,7 @@ import {
 import { Minus, Plus, Trash } from 'phosphor-react'
 import { useShoppingCart } from '../../../contexts/ShoppingCartContext'
 import { coffeeData as coffees } from '../../../service/data'
+import { formatCurrency } from '../../../utils/formatCurrency'
 
 type CartItemProps = {
 	id: string
@@ -38,7 +39,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
 					</ItemButtonRemove>
 				</ItemButtons>
 			</ItemDetailsContainer>
-			<ItemPrice>$ {item?.price}</ItemPrice>
+			<ItemPrice>{formatCurrency((item?.price || 0)* quantity)}</ItemPrice>
 		</CartItemContainer>
 	)
 }

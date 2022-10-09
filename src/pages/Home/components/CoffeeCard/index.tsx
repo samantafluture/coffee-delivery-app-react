@@ -2,6 +2,7 @@ import { CoffeeCardContainer, CoffeeTag } from './styles'
 
 import { ShoppingCart, Minus, Plus } from 'phosphor-react'
 import { useShoppingCart } from '../../../../contexts/ShoppingCartContext'
+import { formatCurrency } from '../../../../utils/formatCurrency'
 
 export enum CoffeeTags {
 	TRADITIONAL = 'Traditional',
@@ -44,7 +45,7 @@ export function CoffeeCard({
 			<p>{description}</p>
 			<div className='footer'>
 				<p>
-					$<span className='footer_price'>{price}</span>
+					<span className='footer_price'>{formatCurrency(price)}</span>
 				</p>
 				<div className='footer_addToCart'>
 					<div className='addToCart_quantity'>
