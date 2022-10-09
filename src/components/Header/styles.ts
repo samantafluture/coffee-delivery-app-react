@@ -50,14 +50,12 @@ export const CartContainer = styled.div`
 `
 
 export const CartCounter = styled.div`
-	background-color: red;
-
 	position: absolute;
 	z-index: 1;
-	top: -0.5rem;
-	right: -0.522rem;
-	width: 1.25rem;
-	height: 1.25rem;
+	top: -0.75rem;
+	right: -0.7522rem;
+	width: 1.5rem;
+	height: 1.5rem;
 	border-radius: 1000px;
 
 	background-color: ${(props) => props.theme['brand-yellow-dark']};
@@ -66,9 +64,8 @@ export const CartCounter = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	
 	span {
-		font-weight: 700;
 		font-size: 0.75rem;
 	}
 `

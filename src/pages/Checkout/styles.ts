@@ -20,12 +20,10 @@ export const CheckoutContainer = styled.main`
 export const AddressContainer = styled.div`
 	width: 60%;
 	margin-bottom: 4rem;
-
 `
 
 export const CartContainer = styled.div`
 	width: 40%;
-	
 `
 
 export const FormContainer = styled.div`
@@ -104,7 +102,7 @@ export const ButtonWithIcon = styled.button`
 	align-items: center;
 	gap: 0.75rem;
 	padding: 1rem;
-  border: 1px solid ${(props) => props.theme['base-button']};
+	border: 1px solid ${(props) => props.theme['base-button']};
 	border-radius: 6px;
 	background-color: ${(props) => props.theme['base-button']};
 	cursor: pointer;
@@ -133,7 +131,6 @@ export const ButtonWithIcon = styled.button`
 export const CartList = styled(FormContainer)`
 	border-radius: 6px 44px;
 `
-
 
 export const Divider = styled.div`
 	border-top: 1px solid ${(props) => props.theme['base-button']};
@@ -176,4 +173,10 @@ export const ButtonCheckout = styled.a`
 	&:hover {
 		background-color: ${(props) => props.theme['brand-yellow-dark']};
 	}
+`
+
+export const ButtonCheckoutDisabled = styled(ButtonCheckout)`
+	background-color: ${(props) => props.theme['brand-yellow-dark']};
+	opacity: 0.7;
+	cursor: not-allowed;
 `

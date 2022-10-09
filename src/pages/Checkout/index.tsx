@@ -13,17 +13,15 @@ import {
 	Divider,
 	PriceBreakdown,
 	ButtonCheckout,
+	ButtonCheckoutDisabled
 } from './styles'
 
-import {
-	MapPinLine,
-	CreditCard,
-	Bank,
-	Money,
-} from 'phosphor-react'
+import { MapPinLine, CreditCard, Bank, Money } from 'phosphor-react'
 import { CartItem } from './CartItem'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 
 export function Checkout() {
+	const { cartItems } = useShoppingCart()
 	return (
 		<CheckoutContainer>
 			<AddressContainer>
@@ -88,25 +86,39 @@ export function Checkout() {
 			<CartContainer>
 				<h2>Selected coffees</h2>
 				<CartList>
-					<CartItem />
-					<Divider />
-					<CartItem />
-					<Divider />
-					<PriceBreakdown>
-						<div>
-							<span>Total items</span>
-							<span>$ 29.97</span>
-						</div>
-						<div>
-							<span>Shipping</span>
-							<span>$ 3.00</span>
-						</div>
-						<div>
-							<span>Total</span>
-							<span>$ 32.97</span>
-						</div>
-					</PriceBreakdown>
-					<ButtonCheckout href='/success'>Checkout</ButtonCheckout>
+					{cartItems.map((item) => (
+						<>
+							<CartItem key={item.id} {...item} />
+							<Divider />
+						</>
+					))}
+					{cartItems.length > 0 ? (
+						<PriceBreakdown>
+							<div>
+								<span>Total items</span>
+								<span>$ 29.97</span>
+							</div>
+							<div>
+								<span>Shipping</span>
+								<span>$ 3.00</span>
+							</div>
+							<div>
+								<span>Total</span>
+								<span>$ 32.97</span>
+							</div>
+						</PriceBreakdown>
+					) : (
+						<span>Ops, your cart is empty!</span>
+					)}
+					{cartItems.length === 0 ? (
+						<ButtonCheckoutDisabled>
+							Checkout
+						</ButtonCheckoutDisabled>
+					) : (
+						<ButtonCheckout href='/success'>
+							Checkout
+						</ButtonCheckout>
+					)}
 				</CartList>
 			</CartContainer>
 		</CheckoutContainer>

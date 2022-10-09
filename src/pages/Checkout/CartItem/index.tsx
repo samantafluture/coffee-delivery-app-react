@@ -8,28 +8,37 @@ import {
 } from './styles'
 
 import { Minus, Plus, Trash } from 'phosphor-react'
+import { useShoppingCart } from '../../../contexts/ShoppingCartContext'
+import { coffeeData as coffees } from '../../../service/data'
 
-import expresso from '../../../assets/coffees/expresso.png'
+type CartItemProps = {
+	id: string
+	quantity: number
+}
 
-export function CartItem() {
+export function CartItem({ id, quantity }: CartItemProps) {
+	const { removeFromCart, increaseCartQuantity, decreaseCartQuantity } = useShoppingCart()
+	const item = coffees.find(i => i.id === id)
+	if (item === null) return null
+	
 	return (
 		<CartItemContainer>
-			<img src={expresso} />
+			<img src={item?.imgUrl} />
 			<ItemDetailsContainer>
-				<p>Traditional Express</p>
+				<p>{item?.title}</p>
 				<ItemButtons>
 					<ItemButtonQuantity>
-						<Minus size={18} />
-						<span>1</span>
-						<Plus size={18} />
+						<Minus size={18} onClick={() => decreaseCartQuantity(id)} />
+						<span>{quantity}</span>
+						<Plus size={18} onClick={() => increaseCartQuantity(id)} />
 					</ItemButtonQuantity>
-					<ItemButtonRemove>
+					<ItemButtonRemove onClick={() => removeFromCart(id)}>
 						<Trash size={18} />
 						<span>Remove</span>
 					</ItemButtonRemove>
 				</ItemButtons>
 			</ItemDetailsContainer>
-			<ItemPrice>$ 9.99</ItemPrice>
+			<ItemPrice>$ {item?.price}</ItemPrice>
 		</CartItemContainer>
 	)
 }

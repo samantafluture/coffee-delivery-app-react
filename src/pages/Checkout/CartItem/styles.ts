@@ -37,7 +37,8 @@ export const ItemButtonQuantity = styled.div`
 	padding: 0 0.5rem;
 	color: ${(props) => props.theme['brand-purple']};
 	font-size: 1rem;
-
+	cursor: pointer;
+	
 	span {
 		color: ${(props) => props.theme['base-subtitle']};
 		padding: 0.5rem;
