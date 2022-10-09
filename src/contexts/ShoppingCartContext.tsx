@@ -14,6 +14,8 @@ type ShoppingCartContext = {
 	increaseCartQuantity: (id: string) => void
 	decreaseCartQuantity: (id: string) => void
 	removeFromCart: (id: string) => void
+	cartQuantity: number
+	cartItems: CartItem[]
 }
 
 export const ShoppingCartContext = createContext({} as ShoppingCartContext)
@@ -44,11 +46,11 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 			}
 		})
 	}
-	 
+
 	function decreaseCartQuantity(id: string) {
 		setCartItems((currentItems) => {
 			if (currentItems.find((item) => item.id === id)?.quantity === 1) {
-				return currentItems.filter(item => item.id !== id)
+				return currentItems.filter((item) => item.id !== id)
 			} else {
 				return currentItems.map((item) => {
 					if (item.id === id) {
@@ -60,9 +62,9 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 			}
 		})
 	}
-	
+
 	function removeFromCart(id: string) {
-		setCartItems(currentItems => {
+		setCartItems((currentItems) => {
 			return currentItems.filter((item) => item.id !== id)
 		})
 	}
@@ -73,7 +75,9 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 				getItemQuantity,
 				increaseCartQuantity,
 				decreaseCartQuantity,
-				removeFromCart
+				removeFromCart,
+				cartQuantity,
+				cartItems,
 			}}
 		>
 			{children}
