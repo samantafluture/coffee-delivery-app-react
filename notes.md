@@ -82,7 +82,7 @@
 - [x] Import this data to the component and map it to list all
 - [x] Use interface props and enums for info that don't change 
 
-## Use useContext() and useReducer()
+## Use useContext() 
 
 - [x] Create folder /context with the specific context (name-of-the-context.ts) inside
 - [x] Using `createContext` create your own context with a new type
