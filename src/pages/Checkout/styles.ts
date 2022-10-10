@@ -137,24 +137,7 @@ export const Divider = styled.div`
 	margin: 2rem 0;
 `
 
-export const PriceBreakdown = styled.div`
-	margin-top: -0.5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 
-	div {
-		display: flex;
-		justify-content: space-between;
-		margin: 0.75rem 0;
-		font-size: 1rem;
-
-		&:last-of-type {
-			font-size: 1.25rem;
-			font-weight: 700;
-		}
-	}
-`
 export const ButtonCheckout = styled.a`
 	border: 0;
 	text-decoration: none;

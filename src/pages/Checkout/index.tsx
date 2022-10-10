@@ -11,7 +11,6 @@ import {
 	AddressContainer,
 	CartContainer,
 	Divider,
-	PriceBreakdown,
 	ButtonCheckout,
 	ButtonCheckoutDisabled,
 } from './styles'
@@ -19,10 +18,7 @@ import {
 import { MapPinLine, CreditCard, Bank, Money } from 'phosphor-react'
 import { CartItem } from './CartItem'
 import { useShoppingCart } from '../../contexts/ShoppingCartContext'
-import { formatCurrency } from '../../utils/formatCurrency'
-import { coffeeData as coffees } from '../../service/data'
-
-const SHIPPING_COST: number = 3;
+import { TotalPrice } from './TotalPrice'
 
 export function Checkout() {
 	const { cartItems } = useShoppingCart()
@@ -98,47 +94,7 @@ export function Checkout() {
 						</>
 					))}
 					{cartItems.length > 0 ? (
-						<PriceBreakdown>
-							<div>
-								<span>Total items</span>
-								<span>
-									{formatCurrency(
-										cartItems.reduce((total, cartItem) => {
-											const item = coffees.find(
-												(i) => i.id === cartItem.id
-											)
-											return (
-												total +
-												(item?.price || 0) *
-													cartItem.quantity
-											)
-										}, 0)
-									)}
-								</span>
-							</div>
-							<div>
-								<span>Shipping</span>
-								<span>{formatCurrency(SHIPPING_COST)}</span>
-							</div>
-							<div>
-								<span>Total</span>
-								<span>
-									{formatCurrency(
-										cartItems.reduce((total, cartItem) => {
-											const item = coffees.find(
-												(i) => i.id === cartItem.id
-											)
-											return (
-												total +
-												SHIPPING_COST +
-												(item?.price || 0) *
-													cartItem.quantity
-											)
-										}, 0)
-									)}
-								</span>
-							</div>
-						</PriceBreakdown>
+						<TotalPrice />
 					) : (
 						<span>Ops, your cart is empty!</span>
 					)}
