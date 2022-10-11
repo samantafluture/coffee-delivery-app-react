@@ -12,6 +12,7 @@ import { MapPinLine, CreditCard, Bank, Money } from 'phosphor-react'
 import { useFormContext } from 'react-hook-form'
 
 export interface OrderFormType {
+	id: string
 	zipcode: string
 	address: string
 	complement: string
@@ -87,7 +88,7 @@ export function OrderForm() {
 				<ButtonsContainer>
 					<input
 						type='radio'
-						value='creditCard'
+						value='Credit Card'
 						{...register('paymentMethod')}
 						defaultChecked
 						id='creditCard'
@@ -98,7 +99,7 @@ export function OrderForm() {
 					</ButtonWithIcon>
 					<input
 						type='radio'
-						value='debitCard'
+						value='Debit Card'
 						{...register('paymentMethod')}
 						id='debitCard'
 					/>
@@ -108,7 +109,7 @@ export function OrderForm() {
 					</ButtonWithIcon>
 					<input
 						type='radio'
-						value='cash'
+						value='Cash'
 						{...register('paymentMethod')}
 						id='cash'
 					/>

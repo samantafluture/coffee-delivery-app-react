@@ -1,5 +1,6 @@
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
 import deliveryIllustration from '../../assets/delivery-illustration.svg'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import {
 	SuccessContainer,
 	SuccessHeader,
@@ -9,6 +10,8 @@ import {
 } from './styles'
 
 export function Success() {
+	const { orderInfo } = useShoppingCart()
+	
 	return (
 		<SuccessContainer>
 			<SuccessHeader>
@@ -26,9 +29,9 @@ export function Success() {
 						</div>
 						<article>
 							<p>
-								Delivery at <span>3400 Rue de Rushbrooke</span>
+								Delivery at <span>{orderInfo.address} - {orderInfo.zipcode}</span>
 							</p>
-							<p>Verdun, Montreal, QC - Canada</p>
+							<p>{orderInfo.city} - {orderInfo.uf}, {orderInfo.country}</p>
 						</article>
 					</OrderDetails>
 					<OrderDetails>
@@ -49,7 +52,7 @@ export function Success() {
 						<article>
 							<p>Payment method</p>
 							<p>
-								<span>Credit card</span>
+								<span>{orderInfo.paymentMethod}</span>
 							</p>
 						</article>
 					</OrderDetails>

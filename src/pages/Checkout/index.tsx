@@ -17,16 +17,32 @@ import { TotalPrice } from './TotalPrice'
 import { OrderFormType, OrderForm } from './OrderForm'
 
 export function Checkout() {
-	const { cartItems } = useShoppingCart()
-	
+	const { cartItems, createOrder } = useShoppingCart()
+
 	const methods = useForm<OrderFormType>()
 	const { handleSubmit } = methods
+
 	const onSubmit = (data: OrderFormType) => {
-		console.log(data)
-		navigate('/success');
+		navigate('/success')
+
+		const id = String(new Date().getTime())
+
+		const order: OrderFormType = {
+			id,
+			zipcode: data.zipcode,
+			address: data.address,
+			complement: data.complement,
+			city: data.city,
+			uf: data.uf,
+			country: data.country,
+			paymentMethod: data.paymentMethod,
+		}
+
+		createOrder(order)
 	}
-	const navigate = useNavigate();
-	
+
+	const navigate = useNavigate()
+
 	return (
 		<FormProvider {...methods}>
 			<form onSubmit={handleSubmit(onSubmit)}>

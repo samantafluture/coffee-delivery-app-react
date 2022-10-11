@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext } from 'react'
+import { createContext, ReactNode, useContext, useState } from 'react'
 import { useLocalStorage } from '../service/useLocalStorage'
 
 type CartItem = {
@@ -10,6 +10,17 @@ type ShoppingCartProviderProps = {
 	children: ReactNode
 }
 
+type Order = {
+	id: string
+	zipcode: string
+	address: string
+	complement: string
+	city: string
+	uf: string
+	country: string
+	paymentMethod: string
+}
+
 type ShoppingCartContext = {
 	getItemQuantity: (id: string) => number
 	increaseCartQuantity: (id: string) => void
@@ -17,6 +28,8 @@ type ShoppingCartContext = {
 	removeFromCart: (id: string) => void
 	cartQuantity: number
 	cartItems: CartItem[]
+	createOrder: (newOrder: Order) => void
+	orderInfo: Order
 }
 
 export const ShoppingCartContext = createContext({} as ShoppingCartContext)
@@ -30,6 +43,16 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 		'shopping-cart',
 		[]
 	)
+	const [orderInfo, setOrderInfo] = useState<Order>({
+		id: '',
+		zipcode: '',
+		address: '',
+		complement: '',
+		city: '',
+		uf: '',
+		country: '',
+		paymentMethod: '',
+	})
 
 	const cartQuantity = cartItems.reduce(
 		(quantity, item) => item.quantity + quantity,
@@ -78,6 +101,10 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 		})
 	}
 
+	function createOrder(newOrder: Order) {
+		setOrderInfo(newOrder)
+	}
+
 	return (
 		<ShoppingCartContext.Provider
 			value={{
@@ -87,6 +114,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 				removeFromCart,
 				cartQuantity,
 				cartItems,
+				createOrder,
+				orderInfo,
 			}}
 		>
 			{children}
