@@ -18,7 +18,7 @@ export interface OrderFormType {
 	city: string
 	uf: string
 	country: string
-  paymentMethod: string
+	paymentMethod: string
 }
 
 export function OrderForm() {
@@ -85,15 +85,34 @@ export function OrderForm() {
 					</div>
 				</FormHeaderAlternate>
 				<ButtonsContainer>
-					<ButtonWithIcon {...register('paymentMethod')}>
+					<input
+						type='radio'
+						value='creditCard'
+						{...register('paymentMethod')}
+						defaultChecked
+						id='creditCard'
+					/>
+					<ButtonWithIcon htmlFor='creditCard'>
 						<CreditCard size={16} />
 						<span>Credit Card</span>
 					</ButtonWithIcon>
-					<ButtonWithIcon {...register('paymentMethod')}>
+					<input
+						type='radio'
+						value='debitCard'
+						{...register('paymentMethod')}
+						id='debitCard'
+					/>
+					<ButtonWithIcon htmlFor='debitCard'>
 						<Bank size={16} />
 						<span>Debit Card</span>
 					</ButtonWithIcon>
-					<ButtonWithIcon {...register('paymentMethod')}>
+					<input
+						type='radio'
+						value='cash'
+						{...register('paymentMethod')}
+						id='cash'
+					/>
+					<ButtonWithIcon htmlFor='cash'>
 						<Money size={16} />
 						<span>Cash</span>
 					</ButtonWithIcon>

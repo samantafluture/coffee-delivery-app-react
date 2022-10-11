@@ -68,9 +68,18 @@ export const ButtonsContainer = styled.div`
 	gap: 0.75rem;
 	justify-content: stretch;
 	align-items: center;
+	
+		input[type="radio"] {
+		display: none;
+	}
+	
+	input[type="radio"]:checked + label {
+		background-color: ${(props) => props.theme['brand-purple-light']};
+		border: 1px solid ${(props) => props.theme['brand-purple']};
+	}
 `
 
-export const ButtonWithIcon = styled.div`
+export const ButtonWithIcon = styled.label`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -100,4 +109,5 @@ export const ButtonWithIcon = styled.div`
 		font-size: 0.75rem;
 		text-transform: uppercase;
 	}
+	
 `
