@@ -1,7 +1,4 @@
-import {
-	CoffeeProps,
-	CoffeeTags,
-} from '../pages/Home/components/CoffeeCard'
+import { CoffeeProps, CoffeeTags } from '../pages/Home/components/CoffeeCard'
 
 import expresso from '../assets/coffees/expresso.png'
 import americano from '../assets/coffees/americano.png'
@@ -26,7 +23,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Traditional Expresso',
 		description: 'Traditional coffee made with hot water and ground beans',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '2',
@@ -35,7 +31,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Expresso Americano',
 		description: 'Diluted espresso, less intense than traditional',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '3',
@@ -44,7 +39,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Creamy Espresso',
 		description: 'Traditional espresso with creamy foam',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '4',
@@ -53,7 +47,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Iced Espresso',
 		description: 'Drink prepared with espresso coffee and ice cubes',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '5',
@@ -62,7 +55,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Coffee with milk',
 		description: 'Half and half traditional espresso with steamed milk',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '6',
@@ -71,7 +63,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Latte',
 		description: 'A shot of espresso with twice the milk and creamy foam',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '7',
@@ -81,7 +72,6 @@ export const coffeeData: CoffeeProps[] = [
 		description:
 			'Cinnamon drink made from equal doses of coffee, milk and foam',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '8',
@@ -91,7 +81,6 @@ export const coffeeData: CoffeeProps[] = [
 		description:
 			'Espresso coffee with chocolate syrup, little milk and foam',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '9',
@@ -101,7 +90,6 @@ export const coffeeData: CoffeeProps[] = [
 		description:
 			'Drink made with chocolate dissolved in hot milk and coffee',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '10',
@@ -110,7 +98,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Cuban',
 		description: 'Iced espresso drink with rum, cream and mint',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '11',
@@ -119,7 +106,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Hawaiian',
 		description: 'Sweet drink prepared with coffee and coconut milk',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '12',
@@ -128,7 +114,6 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Arabic',
 		description: 'Drink prepared with Arabic coffee beans and spices',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '13',
@@ -138,7 +123,6 @@ export const coffeeData: CoffeeProps[] = [
 		description:
 			'Drink made from coffee, Irish whiskey, sugar and whipped cream',
 		price: 9.99,
-		quantity: 1,
 	},
 	{
 		id: '14',
@@ -147,6 +131,5 @@ export const coffeeData: CoffeeProps[] = [
 		title: 'Macchiato',
 		description: 'Espresso coffee mixed with some hot milk and foam',
 		price: 9.99,
-		quantity: 1,
 	},
 ]
